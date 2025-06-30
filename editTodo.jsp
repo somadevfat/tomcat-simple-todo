@@ -21,7 +21,25 @@
   <tr>
     <td align="center"><%= tb.getId() %></td>
     <td align="center"><%= tb.getTask() %></td>
-    <td align="center"><%= tb.getStatus() %></td>
+    <td align="center">
+      <%-- switch文でステータスを判定 --%>
+      <%
+        switch (tb.getStatus()) {
+          case 0:
+            out.print("未完");
+            break;
+          case 1:
+            out.print("進行中");
+            break;
+          case 2:
+            out.print("完了");
+            break;
+          default:
+            out.print("不明");
+            break;
+        }
+      %>
+    </td>
   </tr>
 <% } %>
 </table><br />
