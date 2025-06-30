@@ -1,0 +1,21 @@
+-- データベースが存在しない場合のみ作成
+CREATE DATABASE IF NOT EXISTS todo_app;
+
+USE todo_app;
+
+-- テーブルが存在しない場合のみ作成
+CREATE TABLE IF NOT EXISTS tasks(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    task VARCHAR(255) NOT NULL,
+    status INT NOT NULL DEFAULT 0
+);
+
+INSERT INTO tasks (task, status) 
+SELECT 'サンプルタスク1', 0
+WHERE NOT EXISTS (SELECT 1 FROM tasks LIMIT 1)
+UNION ALL
+SELECT 'サンプルタスク2', 1
+WHERE NOT EXISTS (SELECT 1 FROM tasks LIMIT 1)  
+UNION ALL
+SELECT 'サンプルタスク3', 2
+WHERE NOT EXISTS (SELECT 1 FROM tasks LIMIT 1);

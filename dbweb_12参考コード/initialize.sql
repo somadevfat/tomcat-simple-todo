@@ -1,0 +1,11 @@
+DELETE FROM student;
+INSERT INTO student VALUES(1,'êõå¥',60);
+INSERT INTO student VALUES(2,'ç˜à‰',100);
+INSERT INTO student VALUES(3,'ìcå¥',85);
+INSERT INTO student VALUES(4,'íÜêÏ',90);
+INSERT INTO student VALUES(5,'óÈñÿ',75);
+INSERT INTO student VALUES(6,'è¨ó—',95);
+INSERT INTO student VALUES(7,'ì°å¥',90);
+INSERT INTO student VALUES(8,'ëêñÏ',85);
+INSERT INTO student VALUES(9,'èÌìc',80);
+INSERT INTO student VALUES(10,'è¨ã¥',75);
