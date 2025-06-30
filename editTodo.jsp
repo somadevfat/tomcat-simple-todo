@@ -11,8 +11,8 @@
 <table border="0">
   <tr>
     <th width="50">番号</th>
-    <th width="50">タスク</th>
-    <th width="50">ステータス</th>
+    <th width="300">タスク</th>
+    <th width="300">ステータス</th>
   </tr>
 <%
   for(int i = 0; i < tdto.size(); i++){
