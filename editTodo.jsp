@@ -7,6 +7,16 @@
     <title>表示画面</title>
   </head>
 <body>
+  <h2>タスクの情報を更新します</h2>
+  <form action="/todotestdb/editTodo" method="post">
+  番号　<input type="text" name="id" /><br />
+  タスク　<input type="text" name="task" /><br />
+  ステータス　<input type="text" name="status" /><br /><br />
+　<input type="submit" name="btn" value="追加" />
+  <input type="submit" name="btn" value="修正" />
+  <input type="submit" name="btn" value="削除" />
+  <input type="submit" name="btn" value="表示" />
+  </form>
 <h2><%= msg %></h2>
 <table border="0">
   <tr>
@@ -44,5 +54,6 @@
 <% } %>
 </table><br />
 <a href="/todotestdb/editTodo.html">戻る</a>
+
 </body>
 </html>
